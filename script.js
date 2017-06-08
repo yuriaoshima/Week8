@@ -39,7 +39,11 @@ $('#clearTable').on('click', clearTable);
 /*will hide the table and reveal the form*/
 function handleNewItemButton() {
   //put data into the form template
-  var html = formTemplate({formTitle: "Enter a new sushi entry!"})
+  var html = formTemplate({
+    formTitle: "Enter a new sushi entry!", 
+    label1: "Sushi name:", 
+    label2: "Your favorite restaurant to order this from"
+  });
   $('#bodyContent').html(html);
   //hide the new item and clear table button but reveal submit and clear
   $('#newItemButton').css('display', 'none');
